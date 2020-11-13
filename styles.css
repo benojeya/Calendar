@@ -211,7 +211,7 @@ margin-top:20px;
 }
 
 .timings-event{
-  /* margin-top:52px; */
+  margin-top:52px; 
   position: relative;
   width: 85%; 
   height: 720px;
@@ -219,7 +219,7 @@ margin-top:20px;
 }
 
 .events{
-  /* margin-top:48px; */
+/*   margin-top:48px;  */
   width: 85%; 
  height: 720px;
  border: #DFBC6A 1px solid;
@@ -289,7 +289,7 @@ border-bottom-color: #b5c0cd;
 
 .event {
   background-color: rgba(86, 184, 134, 0.4);
-  position: relative;
+  position: absolute;
   width: 100%;
   border-style: solid;
   border-width: 1px;
