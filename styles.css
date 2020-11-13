@@ -20,27 +20,7 @@
   border-right: 3px solid black;
 }
 
-/* .day-view{
-display: flex; 
- margin: auto; 
-  height: 800px;
-  width: 500px;
-  border: 1px solid black;
-  overflow: auto;
-  
- z-index: 1; 
-} */
-
-#day-view{
-  height: 800px;
-  width: 200px;
-  border: 1px solid black;
-/*   overflow: auto; */
-  
-/*   z-index: 1;
-   */
-}
-  
+.day-view{display: flex;z-index: 1;}
 
 .calendar-month-header {
   display: flex;
@@ -165,31 +145,12 @@ li {
   text-align: right;
   padding-right: 10px;
   margin-top:0px;
-  max-width: 53px;
-  height: 500px;
   background-color: white;
   border-right-width: 5px;
   border-color: #D1D1D1;
   font-size: 0.5em;
-  z-index: 1;
 
 } 
-
-#timings {
-  text-align: right;
-  padding-right: 10px;
-  margin-top:0px;
-  max-width: 40px;
-  height: 500px;
-  background-color: white;
-  border-right-width: 5px;
-  border-color: #D1D1D1;
-  font-size: 0.5em;
-  z-index: 1;
-
-} 
-
-
 .timings span {
   font-size: 150%;
   text-align:left !important;
@@ -211,16 +172,15 @@ margin-top:20px;
 }
 
 .timings-event{
-   
-  position: absolute;
+  /* margin-top:52px; */
+  position: relative;
   width: 85%; 
-  right: 200px;
   height: 720px;
   font-size: 10px;
 }
 
 .events{
-/*   margin-top:48px;  */
+  /* margin-top:48px; */
   width: 85%; 
  height: 720px;
  border: #DFBC6A 1px solid;
@@ -256,34 +216,6 @@ margin-top:20px;
   border-color: #D1D1D1;
 
 }
-/* div {
-  margin: auto;
-  height: 800px;
-  width: 500px;
-  border: 1px solid black;
-  overflow: auto;
-} */
-
-
-#expand{
-border-bottom-color: #b5c0cd;
-  background: pink;
-  height:60px;
-  border-width: 0px;
-  border-style: solid;
-  border-top-width: 1px;
-  border-color: #D1D1D1;
-  will-change: height;
-
-
-}
-#day-view {
-  overflow: hidden;
-} 
-/* div.red {
-  background: red;
-  overflow: hidden;
-} */
 
 
 
