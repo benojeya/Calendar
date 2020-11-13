@@ -424,7 +424,7 @@ function cancelEvent(){
 // scalable scrolling
 
 var expandDiv = document.getElementById("expand");
-var eventsDiv = document.getElementsByClassName("day-view");
+var eventsDiv = document.getElementById("events");
 
 var speed = 6;
         
