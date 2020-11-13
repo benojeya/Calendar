@@ -211,9 +211,10 @@ margin-top:20px;
 }
 
 .timings-event{
-  margin-top:52px; 
-  position: relative;
+   
+  position: absolute;
   width: 85%; 
+  right: 200px;
   height: 720px;
   font-size: 10px;
 }
