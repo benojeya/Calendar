@@ -23,7 +23,7 @@
 .day-view{
   display: flex;
   margin: auto;
-  height: 800px;
+  height: 600px;
   width: 500px;
   border: 1px solid black;
   overflow: auto;
