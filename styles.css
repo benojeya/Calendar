@@ -31,6 +31,17 @@
   z-index: 1;
 }
 
+#day-view{
+  height: 800px;
+  width: 500px;
+  border: 1px solid black;
+  overflow: auto;
+  
+  z-index: 1;
+  
+}
+  
+
 .calendar-month-header {
   display: flex;
   justify-content: space-between;
