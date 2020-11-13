@@ -216,6 +216,35 @@ margin-top:20px;
   border-color: #D1D1D1;
 
 }
+div {
+  margin: auto;
+  height: 800px;
+  width: 500px;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+
+#expand{
+border-bottom-color: #b5c0cd;
+  background: pink;
+  height:60px;
+  border-width: 0px;
+  border-style: solid;
+  border-top-width: 1px;
+  border-color: #D1D1D1;
+  will-change: height;
+
+
+}
+
+#container {
+  overflow: hidden;
+}
+div.red {
+  background: red;
+  overflow: hidden;
+}
 
 
 
