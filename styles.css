@@ -28,7 +28,7 @@
   border: 1px solid black;
   overflow: auto;
   
-  z-index: 1;
+/*   z-index: 1; */
 }
 
 #day-view{
@@ -37,8 +37,8 @@
   border: 1px solid black;
   overflow: auto;
   
-  z-index: 1;
-  
+/*   z-index: 1;
+   */
 }
   
 
