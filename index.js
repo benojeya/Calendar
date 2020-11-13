@@ -161,7 +161,7 @@ function touchm(event){
 // expand event
 
 var expandDiv = document.getElementById("expand");
-var eventsDiv = document.getElementById("events");
+var eventsDiv = document.getElementById("timing");
 
 var speed = 6;
         
