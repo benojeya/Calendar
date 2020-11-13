@@ -430,13 +430,13 @@ var speed = 6;
         
         function expanding() {
           var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
-          var scrollAndSpeed = (scrolltop);
+          var scrollAndSpeed = (scrolltop/ speed);
           //Expand using transform
           //expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
           
           //Or using width
           //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-         expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
+         expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 40), 195) + "%";
         
         }
         
