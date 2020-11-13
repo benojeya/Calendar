@@ -436,10 +436,7 @@ var speed = 6;
           
           //Or using width
           //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-          expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
-
-          console.log(expandDiv.parentNode.height)
-          expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+         expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
         
         }
         
