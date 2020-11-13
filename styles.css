@@ -20,22 +20,22 @@
   border-right: 3px solid black;
 }
 
-.day-view{
-/*   display: flex; */
-/*   margin: auto; */
+/* .day-view{
+display: flex; 
+ margin: auto; 
   height: 800px;
   width: 500px;
   border: 1px solid black;
   overflow: auto;
   
-/*   z-index: 1; */
-}
+ z-index: 1; 
+} */
 
 #day-view{
   height: 800px;
   width: 500px;
   border: 1px solid black;
-  overflow: auto;
+/*   overflow: auto; */
   
 /*   z-index: 1;
    */
