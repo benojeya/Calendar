@@ -216,13 +216,13 @@ margin-top:20px;
   border-color: #D1D1D1;
 
 }
-div {
+/* div {
   margin: auto;
   height: 800px;
   width: 500px;
   border: 1px solid black;
   overflow: auto;
-}
+} */
 
 
 #expand{
@@ -238,13 +238,13 @@ border-bottom-color: #b5c0cd;
 
 }
 
-#container {
+#day-view {
   overflow: hidden;
 }
-div.red {
+/* div.red {
   background: red;
   overflow: hidden;
-}
+} */
 
 
 
