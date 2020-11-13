@@ -421,6 +421,34 @@ function cancelEvent(){
 }
 
 
+// scalable scrolling
+
+var expandDiv = document.getElementById("expand");
+var eventsDiv = document.getElementById("events");
+
+var speed = 6;
+        
+        function expanding() {
+          var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
+          var scrollAndSpeed = (scrolltop);
+          //Expand using transform
+          //expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
+          
+          //Or using width
+          //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
+          expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+
+          console.log(expandDiv.parentNode.height)
+          expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+        
+        }
+        
+        eventsDiv.addEventListener('scroll', function() { // on page scroll
+          requestAnimationFrame(expanding); // call parallaxing()
+        }, false);  
+
+
+
 // drag drop event starts
 
 function _(id) {
