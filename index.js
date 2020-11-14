@@ -423,28 +423,20 @@ function cancelEvent(){
 
 // scalable scrolling
 
-var expandDiv = document.getElementById("expand");
-var eventsDiv = document.getElementById("events");
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-var speed = 6;
-        
-        function expanding() {
-          var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
-          var scrollAndSpeed = (scrolltop/ speed);
-          //Expand using transform
-          //expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
-          
-          //Or using width
-          //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-         expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 40), 195) + "%";
-        
-        }
-        
-        eventsDiv.addEventListener('scroll', function() { // on page scroll
-          requestAnimationFrame(expanding); // call parallaxing()
-        }, false);  
-
-
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 
 // drag drop event starts
 
