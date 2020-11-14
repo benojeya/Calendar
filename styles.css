@@ -28,19 +28,7 @@
   overflow: auto;
   z-index: 1;}
 
-#expand{
-border-bottom-color: #b5c0cd;
-  background: pink;
-  height:60px;
-  max-height: 90px;
-  border-width: 0px;
-  border-style: solid;
-  border-top-width: 1px;
-  border-color: #D1D1D1;
-  will-change: height;
 
-
-}
 
 .calendar-month-header {
   display: flex;
@@ -236,6 +224,21 @@ margin-top:20px;
   border-color: #D1D1D1;
 
 }
+
+.collapsible{
+border-bottom-color: #b5c0cd;
+  background: pink;
+  height:60px;
+  max-height: 90px;
+  border-width: 0px;
+  border-style: solid;
+  border-top-width: 1px;
+  border-color: #D1D1D1;
+/*   will-change: height; */
+
+
+}
+
 
 
 
