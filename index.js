@@ -448,6 +448,7 @@ var speed = 6;
         eventsDiv.addEventListener('scroll', function() { // on page scroll
           requestAnimationFrame(expanding); // call parallaxing()
         }, false);  
+           eventsDiv.addEventListener('gesturechange', function() {});
 
 
 
