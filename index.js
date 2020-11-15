@@ -425,7 +425,8 @@ function cancelEvent(){
 
 
 var expandDiv = document.getElementById("expand");
-var eventsDiv = document.getElementById("events");
+var eventsDiv = document.getElementById("events").className = "timings-event"; 
+
 
 var speed = 6;
         
