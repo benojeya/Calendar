@@ -425,8 +425,7 @@ function cancelEvent(){
 
 
 var expandDiv = document.getElementById("expand");
-var eventsDiv = document.getElementById("events").className = "timings-event"; 
-
+// var eventsDiv = document.getElementById("events");
 
 var speed = 6;
         
@@ -434,16 +433,14 @@ var speed = 6;
           var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
           var scrollAndSpeed = (scrolltop);
           //Expand using transform
-          expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
+          // expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
           
           //Or using width
           //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-            
-            
-//           expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+          expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
 
         
-//           expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+          expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
         
         }
         
