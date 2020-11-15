@@ -181,10 +181,20 @@ margin-top:20px;
 
 .timings-event{
   /* margin-top:52px; */
-  position: relative;
-  width: 85%; 
+/*   position: relative; */
+/*   width: 85%;  */
   height: 720px;
   font-size: 10px;
+  
+  margin: auto;
+/*   height: 800px; */
+  width: 500px;
+  border: 1px solid black;
+  overflow: auto;
+  
+  
+  
+  
 }
 
 .events{
@@ -225,6 +235,8 @@ margin-top:20px;
 
 }
 
+
+
 #expand{
 border-bottom-color: #b5c0cd;
   background: pink;
@@ -233,7 +245,7 @@ border-bottom-color: #b5c0cd;
   border-style: solid;
   border-top-width: 1px;
   border-color: #D1D1D1;
-/*   will-change: height; */
+ will-change: height; 
 
 
 }
