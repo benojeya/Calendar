@@ -5,7 +5,7 @@
             <div class="day-view-empty"></div>
             <div class="day-view-empty"></div>
             <div class="day-view-empty">
-                    <div id="expand"></div>
+                    <div class ="expand" id="expand"></div>
                 </div>
             <div class="day-view-empty"></div>
             <div class="day-view-empty"></div>
@@ -55,21 +55,23 @@ border-bottom-color: #b5c0cd;
 
 </style>
 <script>
-        var expandDiv = document.getElementById("expand");
-        var speed = 6;
-        
-        function expanding() {
-          var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
-          var scrollAndSpeed = (scrolltop / speed);
-          //Expand using transform
-          expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
-          
-          //Or using width
-          // expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 40), 195) + "%";
-        
-        }
-        
-        window.addEventListener('scroll', function() { // on page scroll
-          requestAnimationFrame(expanding); // call parallaxing()
-        }, false);
+       $(document).scroll(function(){
+    //debugger;
+         //  grab the scroll amount and the window height
+          var scrollAmount = $(window).scrollTop();
+          var documentHeight = $(document).height();
+
+       //    calculate the percentage the user has scrolled down the page
+          var scrollPercent = (scrollAmount / documentHeight) * 100;
+
+
+
+          //function increaseHeight() { 
+                $(".expand").css({
+                    height: scrollPercent + 'px'
+                });
+          //}
+
+               //do something when a user gets 50% of the way down my page
+      });
         </script>
