@@ -64,7 +64,7 @@ var speed = 6;
         }, false);  
 
                 document.getElementById("day-view").addEventListener('scroll', function() { 
-                console.log("event called")// on page scroll
+                console.log("day-view scroll")// on page scroll
 //           requestAnimationFrame(expanding); // call parallaxing()
                 expanding()
         }, false);  
