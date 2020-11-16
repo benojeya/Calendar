@@ -34,7 +34,7 @@ var eventsDiv = document.getElementById("events");
 var speed = 6;
         
         function expanding() {
-                console.log(10)
+                console.log(expanding)
           var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
           var scrollAndSpeed = (scrolltop);
           //Expand using transform
