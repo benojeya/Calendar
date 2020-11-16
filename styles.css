@@ -20,7 +20,14 @@
   border-right: 3px solid black;
 }
 
-.day-view{display: flex;z-index: 1;}
+.day-view{
+  display: flex;
+  height: 600px;
+  width: 500px;
+  /* border: 1px solid black; */
+  overflow: auto;
+  
+  z-index: 1;}
 
 .calendar-month-header {
   display: flex;
@@ -177,9 +184,13 @@ margin-top:20px;
   /* margin-top:52px; */
   position: relative;
   width: 85%; 
-  height: 500px;
+/*   height: 500px; */
   font-size: 10px;
 
+}
+
+#container {
+  overflow: hidden;
 }
 
 
