@@ -35,19 +35,21 @@ var speed = 3;
         
         function expanding() {
                 console.log("expand called")
-          var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
+          var scrolltop =  document.getElementById("expand").scrollTop; // get number of pixels document has scrolled vertically
           var scrollAndSpeed = (scrolltop);
           //Expand using transform
           // expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
           
           //Or using width
           //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-          expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+          document.getElementById("events").parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+                
+               
                 
                
 
         
-          expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+           document.getElementById("expand").style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
                
         
         }
