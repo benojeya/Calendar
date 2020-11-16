@@ -178,10 +178,7 @@ margin-top:20px;
 .timings-event{
   /* margin-top:52px; */
   position: relative;
-   height: 600px;
-  width: 500px;
-  /* border: 1px solid black; */
-  overflow: auto;
+ 
   
 /*   width: 85%;  */
 /*   height: 500px; */
@@ -191,6 +188,7 @@ margin-top:20px;
 
 #container {
   overflow: hidden;
+  height: 425px;
 }
 
 
