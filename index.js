@@ -31,7 +31,7 @@ document.getElementById("day-view").addEventListener('touchend',touche,false);
 var expandDiv = document.getElementById("expand");
 var eventsDiv = document.getElementById("events");
 
-var speed = 6;
+var speed = 3;
         
         function expanding() {
                 console.log("expand called")
