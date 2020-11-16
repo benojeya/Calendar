@@ -29,7 +29,10 @@ document.getElementById("day-view").addEventListener('touchend',touche,false);
 // const evMon = interact('.eventMonth') 
 
 var expandDiv = document.getElementById("expand");
+
 var eventsDiv = document.getElementById("events");
+console.log(expandDiv)
+console.log(eventsDiv)
 
 var speed = 6;
         
