@@ -31,40 +31,42 @@ document.getElementById("day-view").addEventListener('touchend',touche,false);
 var expandDiv = document.getElementById("expand");
 
 var eventsDiv = document.getElementById("events");
-console.log(expandDiv)
-console.log(eventsDiv)
+// console.log(expandDiv)
+// console.log(eventsDiv)
 
 var speed = 6;
         
         function expanding() {
                 console.log("expand called")
-          var scrolltop =  eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
-          var scrollAndSpeed = (scrolltop);
+          var scrolltop =  document.getElementById("events").scrollTop; // get number of pixels document has scrolled vertically
+          var scrollAndSpeed = (scrolltop/speed);
           //Expand using transform
           // expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
           
           //Or using width
           //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-            document.getElementById("expand").parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+//             document.getElementById("expand").parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px"; 
+//            document.getElementById("expand").style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+               
+        
+        
+        
+         document.getElementById("expand").style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
                 
-               
+                document.getElementById("expand").parentNode.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
+
+
+
+
+              
+           
                 
-               
-
-        
-           document.getElementById("expand").style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
-               
-        
-        }
-        
-        eventsDiv.addEventListener('scroll', function() { 
-                console.log("event called")// on page scroll
-//           requestAnimationFrame(expanding); // call parallaxing()
-                expanding()
-        }, false);  
-
-                document.getElementById("day-view").addEventListener('scroll',false);  
-
+                }
+                
+                document.getElementById("events").addEventListener('scroll', function() { // on page scroll
+                  requestAnimationFrame(expanding); // call parallaxing()
+                //   expanding()
+                }, false);  
 
 // document.getElementById("month-view").addEventListener('touchmove',touchm,false);
 // document.getElementById("day-view").addEventListener('touchmove',touchm,false);
