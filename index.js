@@ -63,11 +63,7 @@ var speed = 6;
                 expanding()
         }, false);  
 
-                document.getElementById("day-view").addEventListener('scroll', function() { 
-                console.log("day-view scroll")// on page scroll
-//           requestAnimationFrame(expanding); // call parallaxing()
-                expanding()
-        }, false);  
+                document.getElementById("day-view").addEventListener('scroll',false);  
 
 
 // document.getElementById("month-view").addEventListener('touchmove',touchm,false);
