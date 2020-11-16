@@ -177,17 +177,17 @@ margin-top:20px;
   /* margin-top:52px; */
   position: relative;
   width: 85%; 
-
+  height: 500px;
   font-size: 10px;
 
 }
 
 
-#events{
+/* #events{
 border: 1px;
   border-color: grey;
    height: 420px;
-}
+} */
 
 
 /* changed here */
