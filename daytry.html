@@ -1,28 +1,42 @@
+<div id="day-view" class="column right" >
+        <div class = "day-view">
+          <div id="timings" class="timings">
+            <div class="date"> <span> 9:00 </span> AM <div class="date small"> 9:30 </div></div>
+            <!-- <div class="small"> 9:30 </div> -->
+            <div class="date"> <span> 10:00 </span>AM <div class="date small"> 10:30 </div></div>
+            <!-- <div class="date"> 10:30 </div> -->
+            <div class="date"> <span> 11:00 </span>AM <div class="date small"> 11:30 </div></div>
+            <!-- <div class="date"> 11:30 </div> -->
+            <div class="date"> <span> 12:00 </span>PM <div class="date small"> 12:30 </div></div>
+            <!-- <div class="date"> 12:30 </div> -->
+            <div class="date"> <span> 1:00 </span>PM <div class="date small"> 1:30 </div></div>
+            <!-- <div class="date"> 1:30 </div> -->
+            <div class="date"> <span> 2:00 </span>PM <div class="date small"> 2:30 </div></div>
+            <!-- <div class="date"> 2:30 </div> -->
+            <div class="date"> <span> 3:00 </span>PM <div class="date small"> 3:30 </div></div>
+            <!-- <div class="date"> 3:30 </div> -->
+            <div class="date"> <span> 4:00 </span>PM <div class="date small"> 4:30 </div></div>
+            <!-- <div class="date"> 4:30 </div> -->
+            <div class="date"> <span> 5:00 </span>PM <div class="date small"> 5:30 </div></div>
+            <!-- <div class="date"> 5:30 </div> -->
+            <div class="date"> <span> 6:00 </span>PM <div class="date small"> 6:30 </div></div>
+            <!-- <div class="date"> 6:30 </div> -->
+            <div class="date"> <span> 7:00 </span>PM <div class="date small"> 7:30 </div></div>
 
-
-
-
-
-
-
-<div id="container">
-   
-
-    
-    
-    <div id="events" class="timings-event">
+            <div class="date"> <span> 8:00 </span>PM <div class="date small"> 8:30 </div></div>
+            <!-- <div class="date"> <span> 9:00 </span>PM </div> -->
+          </div>
+          <div id="container">
+          <div id="events" class="timings-event">
             <!-- <div id="drop_zone" ondragover="return false"></div>
             <div id = "dragevent" class="event" draggable="true" >Meeting with UI project team</div> -->
+            <div class="day-view-empty">                  
+            </div>
             <div class="day-view-empty"></div>
             <div class="day-view-empty"></div>
-            <div class="day-view-empty red">
-                    <div id="expand"></div>
-                </div>
-            <div class="day-view-empty"></div>
-            <div class="day-view-empty"></div>
-            <div class="day-view-empty"></div>
-            <div class="day-view-empty"></div>
-            <div class="day-view-empty"></div>
+             <div class="day-view-empty"></div>
+             <div class="day-view-empty red">  <div id="expand"></div>
+              </div>
             <div class="day-view-empty"></div>
             <div class="day-view-empty"></div>
             <div class="day-view-empty"></div>
@@ -30,53 +44,68 @@
             <div class="day-view-empty"></div>
             <div class="day-view-empty"></div>
             <div class="day-view-empty"></div>
-            <div class="day-view-empty"></div>
-            <div class="day-view-empty"></div>
-            <div class="day-view-empty"></div>
-            
-          </div>
-
-          
         </div>
-      
-        
-      </div>
-
-
-   <style>
    
-   body{
-  padding: 1rem;
-  text-align:center;
-}
-div {
-  margin: auto;
-  height: 800px;
-  width: 1500px;
-  border: 1px solid black;
-  overflow: auto;
-}
+        </div>
+       </div>
+</div>
+
+
+
+<style>
+
 .day-view{
   display: flex;
-  height: 600px;
-  width: 500px;
-  /* border: 1px solid black; */
-  overflow: auto;
-  z-index: 1;}
+z-index: 1;}
 
 
-.day-view-empty{
-  /* border-bottom-color: grey; */
-  background: white;
-  height:60px;
-  width: 500px;
-  border-width: 0px;
-  border-style: solid;
-  border-top-width: 1px;
+.timings {
+  text-align: right;
+  padding-right: 10px;
+  margin-top:0px;
+  background-color: white;
+  border-right-width: 5px;
   border-color: #D1D1D1;
- 
+  font-size: 0.5em;
+
+} 
+.timings span {
+  font-size: 150%;
+  text-align:left !important;
+  color: #696969;
 }
 
+.timings .date{
+  height:60px;
+  margin:0;
+  padding:0;
+}
+
+.timings .date .small{
+margin-top:20px;
+}
+
+.timings .small{
+  height: 30px;
+}
+
+/* changed here */
+.timings-event{
+  /* margin-top:52px; */
+/*   position: relative; */
+/*     display: flex; */ 
+   height: 700px;
+  width: 400px;
+  border: 1px solid black;
+  overflow: auto;
+ 
+ 
+/*   width: 85%;  */
+/*   height: 500px; */
+  font-size: 10px;
+     z-index: 1;
+
+}
 
 #expand{
 border-bottom-color: #b5c0cd;
@@ -91,42 +120,87 @@ border-bottom-color: #b5c0cd;
 
 }
 
-#container {
-  overflow: hidden;
+
+.day-view-empty{
+  border-bottom-color: #b5c0cd;
+  background: white;
+  height:60px;
+  border-width: 0px;
+  border-style: solid;
+  border-top-width: 1px;
+  border-color: #D1D1D1;
+
 }
+
+/* #container {
+  overflow: hidden;
+  height: 425px;
+} */
+
+
+/* #events{
+border: 1px;
+  border-color: grey;
+   height: 420px;
+} */
+
 div.red {
   background: red;
   overflow: hidden;
 }
 
-   </style>
+
+/* changed here */
+/* .events{
+
+  width: 85%; 
+ height: 720px;
+ border: #DFBC6A 1px solid;
+ display: inline-block; 
+ justify-content: space-between;
+ background-color: #F0F0F0;
+cursor: move;} */
+
+</style>
 
 
 <script>
 
 
-var expandDiv = document.getElementById("expand");
-var eventsDiv = document.getElementById("events");
+        var expandDiv = document.getElementById("expand");
+        var eventsDiv = document.getElementById("events");
+        // console.log(expandDiv)
+        // console.log(eventsDiv)
+        
+        var speed = 6;
+                
+                function expanding() {
+                    console.log(10)
+                  var scrolltop = document.getElementById("events").scrollTop; // get number of pixels document has scrolled vertically
+                  var scrollAndSpeed = (scrolltop/speed);
+                  //Expand using transform
+                  // expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
+                  
+                  //Or using width
+                  //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
+                //   document.getElementById("expand").parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px"; // prints the expanding height
+                //   console.log( expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px")
+        
+                document.getElementById("expand").style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
+                console.log(document.getElementById("expand").style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 6) + ")")
+                document.getElementById("expand").parentNode.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
 
-var speed = 6;
-        
-        function expanding() {
-          var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
-          var scrollAndSpeed = (scrolltop);
-          //Expand using transform
-          // expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
-          
-          //Or using width
-          //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-          expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
 
-        
-          expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
-        
-        }
-        
-        eventsDiv.addEventListener('scroll', function() { // on page scroll
-          requestAnimationFrame(expanding); // call parallaxing()
-        }, false);  
 
-</script>
+
+                //   document.getElementById("expand").style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
+           
+                
+                }
+                
+                document.getElementById("events").addEventListener('scroll', function() { // on page scroll
+                  requestAnimationFrame(expanding); // call parallaxing()
+                //   expanding()
+                }, false);  
+        
+        </script>
