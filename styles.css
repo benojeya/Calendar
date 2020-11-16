@@ -180,7 +180,7 @@ margin-top:20px;
   position: relative;
  
   
-/*   width: 85%;  */
+  width: 85%; 
 /*   height: 500px; */
   font-size: 10px;
 
@@ -188,7 +188,7 @@ margin-top:20px;
 
 #container {
   overflow: hidden;
-  height: 425px;
+/*   height: 425px; */
 }
 
 
