@@ -171,12 +171,14 @@ margin-top:20px;
   height: 30px;
 }
 
+/* changed here */
 .timings-event{
   /* margin-top:52px; */
   position: relative;
   width: 85%; 
-  height: 720px;
+  height: 420px;
   font-size: 10px;
+  border-color: grey;
 }
 
 /* changed here */
