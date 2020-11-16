@@ -56,7 +56,8 @@ var speed = 6;
         
         eventsDiv.addEventListener('scroll', function() { 
                 console.log("event called")// on page scroll
-          requestAnimationFrame(expanding); // call parallaxing()
+//           requestAnimationFrame(expanding); // call parallaxing()
+                expanding()
         }, false);  
 
 
