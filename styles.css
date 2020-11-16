@@ -128,10 +128,6 @@ li {
   
 }
 
-#events{
-border: 1px;
-  border-color: grey;
-}
 
 .calendar-day > span {
   display: flex;
@@ -186,11 +182,19 @@ margin-top:20px;
 
 }
 
+
+#events{
+border: 1px;
+  border-color: grey;
+   height: 420px;
+}
+
+
 /* changed here */
 .events{
 /*   margin-top:48px; */
   width: 85%; 
- height: 420px;
+ height: 720px;
  border: #DFBC6A 1px solid;
  display: inline-block; 
  justify-content: space-between;
