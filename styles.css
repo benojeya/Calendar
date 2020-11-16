@@ -179,10 +179,11 @@ margin-top:20px;
   font-size: 10px;
 }
 
+/* changed here */
 .events{
-  margin-top:48px;
+/*   margin-top:48px; */
   width: 85%; 
- height: 720px;
+ height: 420px;
  border: #DFBC6A 1px solid;
  display: inline-block; 
  justify-content: space-between;
