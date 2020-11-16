@@ -217,6 +217,11 @@ border: 1px;
    height: 420px;
 } */
 
+div.red {
+  background: red;
+  overflow: hidden;
+}
+
 
 /* changed here */
 .events{
