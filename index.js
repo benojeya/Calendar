@@ -14,6 +14,7 @@ let moving = null;
 var startX;
 var doubleTouch = false;
 var startY;
+var currentevent;
 dates=["","October 1","October 2","October 3","October 4","October 5","October 6","October 7","October 8","October 9","October 10","October 11","October 12","October 13","October 14","October 15","October 16","October 17","October 18","October 19","October 20","October 21","October 22","October 23","October 24","October 25","October 26","October 27","October 28","October 29","October 30","October 31"] 
 
 // let dateMap = new Map([[1,[]],[2,[]],[3,[]],[4,[]],[5,[]],[6,[]],[7,[]],[8,[]],[9,[]],[10,[]],[11,[]],[12,[]],[13,[]],[14,[]],[15,[]],[16,[]],[17,[]],[18,[]],[19,[]],[20,[]],[21,[]],[22,[]],[23,[]],[24,[]],[25,[]],[26,[]],[27,[]],[28,[]],[29,[]],[30,[]],[31,[]]])
@@ -37,9 +38,8 @@ function touchs(event){
         timer = setTimeout(function(){ 
             if (move == false){
                 if( event.targetTouches[0].target.parentElement.id=="calendar-day"||event.targetTouches[0].target.parentElement.id=="events" ||event.targetTouches[0].target.parentElement.className=="eventMonth"||event.targetTouches[0].target.className=="eventMonth"){
-                    
                     var touch = event.targetTouches[0];
-                    // console.log(touch);
+                    console.log("why");
                     date = parseInt(touch.target.id);
                     document.querySelector('.menu').classList.value="menu open";
                     var menu = document.getElementById("menu");
@@ -51,7 +51,8 @@ function touchs(event){
             }
         },touchduration); 
         touch = event.targetTouches[0];
-        // console.log(event);
+        currentevent = event;
+        console.log(event);
         if(event.targetTouches[0].target.parentElement.id=="calendar-day"||event.targetTouches[0].target.parentElement.id=="events" || event.targetTouches[0].target.id=="bars"||event.targetTouches[0].target.parentElement.className=="eventMonth"||event.targetTouches[0].target.className=="eventMonth"){
             // console.log(touch);
             var menu_state = document.querySelector('.menu').classList.value;
@@ -64,9 +65,18 @@ function touchs(event){
     
         }
         if (touch.target.parentElement.className=="eventMonth"||touch.target.className=="eventMonth"){
+            console.log("what");
             event.target.parentElement.style.width =  event.target.parentElement.clientWidth +'px';
             event.target.parentElement.style.height =  event.target.parentElement.clientHeight+'px';
             event.target.parentElement.style.position = "fixed";
+        }
+
+        if (event.target.id=="help"){
+            openhelp(event);
+        }
+        if (event.target.id=="help-screen"){
+            document.getElementById("help-screen").style.display = "none";
+
         }
         doubleTouch=false;
 }}
@@ -206,6 +216,7 @@ function updateDayView(currentDay){
 
 
 function add(){
+    editEvent = false;
     document.getElementById("addEvent").style.display = "block";
     document.getElementById("addEvent").style.top = (touch.pageY-50) + 'px';
     document.getElementById("addEvent").style.left = (touch.pageX-50) + 'px';
@@ -216,11 +227,58 @@ function add(){
         document.getElementById("dateentry").value = 1;
 
     }
+    if (editEvent==true){
+        document.getElementById("add_btn").innerText="Edit";
+
+    }
+    else{
+        document.getElementById("add_btn").innerText="Add";
+
+    }
     
     var menu_state = document.querySelector('.menu').classList.value;
         if(menu_state=="menu open"){
             document.querySelector('.menu').classList.value = "menu";
         }
+}
+
+function edit(){
+    editEvent = true;
+    var parent = currentevent.target.parentElement;
+    console.log(currentevent);
+    if (parent.className=="eventMonth"){
+        document.getElementById("addEvent").style.display = "block";
+        document.getElementById("addEvent").style.top = (touch.pageY-50) + 'px';
+        document.getElementById("addEvent").style.left = (touch.pageX-50) + 'px';
+        if (editEvent==true){
+            document.getElementById("add_btn").innerText="Edit";
+    
+        }
+        else{
+            document.getElementById("add_btn").innerText="Add";
+    
+        }
+    
+    document.getElementById("eventName").value = parent.dataset.eventName;
+    document.getElementById("eventDesc").value = parent.dataset.desc;
+    document.getElementById("dateentry").value = parent.dataset.date;
+    var start = parseInt((parent.dataset.t/61)+9);
+    document.getElementById("startTime").value = start;
+    document.getElementById("endTime").value = parseInt((parent.dataset.h/60)+start);
+
+
+    var menu_state = document.querySelector('.menu').classList.value;
+        if(menu_state=="menu open"){
+            document.querySelector('.menu').classList.value = "menu";
+        }
+
+    }
+    
+
+}
+
+function editEvent(){
+
 }
 function cutEvent(){
 
@@ -340,8 +398,18 @@ function dbltouch(event){
     
 }
 
+function openhelp(event){
+    console.log("triggered");
+    document.getElementById("help-screen").style.display = "block";
+}
+function closehelp(event){
+    document.getElementById("help-screen").style.display = "none";
+}
+
 
 function addEvent(){
+
+
     var eventName = document.getElementById("eventName").value;
     var eventDesc = document.getElementById("eventDesc").value;
     var date =document.getElementById("dateentry").value;
@@ -419,37 +487,6 @@ function cancelEvent(){
     document.getElementById("endTime").value=9;
     document.getElementById("addEvent").style.display = "none";
 }
-
-
-// scalable scrolling
-
-
-var expandDiv = document.getElementById("expand");
-// var eventsDiv = document.getElementById("events");
-
-var speed = 6;
-        
-        function expanding() {
-          var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
-          var scrollAndSpeed = (scrolltop/speed);
-          //Expand using transform
-//           expandDiv.style.transform = "scaley( " + Math.min(Math.max(scrollAndSpeed, 1), 2) + ")";
-             expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 20), 95) + "%";
-          
-          //Or using width
-          //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
-//           expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
-
-        
-//           expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
-        
-        }
-        
-        eventsDiv.addEventListener('scroll', function() { // on page scroll
-          requestAnimationFrame(expanding); // call parallaxing()
-        }, false);  
-          
-
 
 
 // drag drop event starts
