@@ -34,6 +34,7 @@ var eventsDiv = document.getElementById("events");
 var speed = 6;
         
         function expanding() {
+                console.log(10)
           var scrolltop = eventsDiv.scrollTop; // get number of pixels document has scrolled vertically
           var scrollAndSpeed = (scrolltop);
           //Expand using transform
@@ -48,7 +49,8 @@ var speed = 6;
         
         }
         
-        eventsDiv.addEventListener('scroll', function() { // on page scroll
+        eventsDiv.addEventListener('scroll', function() { 
+                console.log(10)// on page scroll
           requestAnimationFrame(expanding); // call parallaxing()
         }, false);  
 
