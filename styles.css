@@ -177,10 +177,14 @@ margin-top:20px;
 /* changed here */
 .timings-event{
   /* margin-top:52px; */
-  position: relative;
+/*   position: relative; */
+   height: 700px;
+  width: 500px;
+  border: 1px solid black;
+  overflow: auto;
  
-  
-  width: 85%; 
+    z-index: 1;
+/*   width: 85%;  */
 /*   height: 500px; */
   font-size: 10px;
 
