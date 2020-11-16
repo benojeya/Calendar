@@ -44,11 +44,11 @@ var speed = 3;
           //expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 195) + "%";
           expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
                 
-                console.log( expandDiv.parentNode.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";)
+               
 
         
           expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";
-                console.log(    expandDiv.style.height = Math.min(Math.max(scrollAndSpeed, 60), 150) + "px";)
+               
         
         }
         
