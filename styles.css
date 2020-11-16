@@ -192,6 +192,19 @@ margin-top:20px;
 
 }
 
+#expand{
+border-bottom-color: #b5c0cd;
+  background: pink;
+  height:60px;
+  border-width: 0px;
+  border-style: solid;
+  border-top-width: 1px;
+  border-color: #D1D1D1;
+  will-change: height;
+
+
+}
+
 #container {
   overflow: hidden;
 /*   height: 425px; */
