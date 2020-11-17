@@ -193,13 +193,16 @@ margin-top:20px;
 }
 
 #expand{
-border-bottom-color: #b5c0cd;
-  background: pink;
+/* border-bottom-color: #b5c0cd; */
+  background: c0ebc7;
   height:60px;
   border-width: 0px;
   border-style: solid;
   border-top-width: 1px;
+/*   border-color: #D1D1D1; */
+   border-left-width: 8px;
   border-color: #D1D1D1;
+border-left-color: #4eb680;
   will-change: height;
 
 
